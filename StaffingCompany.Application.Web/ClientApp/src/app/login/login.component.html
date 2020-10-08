@@ -1,0 +1,20 @@
+<div class="login-container">
+  <mat-card class="login-form">
+    <mat-toolbar color="primary" class="login-toolbar">Login</mat-toolbar>
+    <form [formGroup]="loginForm" class="login-form" rowHeight="300px" (ngSubmit)="onLogin()">
+      <mat-error *ngIf=" errorMessage != '' ">
+        {{ errorMessage }}
+      </mat-error>
+      <mat-form-field>
+        <input matInput formControlName="email" placeholder="Email">
+        <mat-error *ngIf="loginForm.controls['email'].errors?.required">{{ errorMessageType.invalidForm}}</mat-error>
+        <mat-error *ngIf="loginForm.controls['email'].errors?.email">Invalid email</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="password" placeholder="Password" type="password">
+        <mat-error *ngIf="loginForm.controls['password'].errors?.required">{{ errorMessageType.invalidForm}}</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </mat-card>
+</div>

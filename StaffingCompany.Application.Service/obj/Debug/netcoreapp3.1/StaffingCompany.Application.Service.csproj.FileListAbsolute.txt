@@ -1,0 +1,14 @@
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Model.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.csprojAssemblyReference.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.AssemblyInfoInputs.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.AssemblyInfo.cs
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Service.deps.json
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Service.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Service.pdb
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.pdb
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Model.pdb
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.csproj.CoreCompileInputs.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.csproj.CopyComplete
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Service\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Service.pdb

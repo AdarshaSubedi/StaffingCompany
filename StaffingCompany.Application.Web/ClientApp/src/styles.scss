@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.success{
+  background-color:	#008000 !important;
+  color: #fff !important;
+  .mat-simple-snackbar-action {
+    color: white !important;
+  }
+}
+.warn{
+  background-color:	#db3416 !important;
+  color: #fff !important;
+  .mat-simple-snackbar-action {
+    color: white !important;
+  }
+}
+
+
+.mat-dialog-container{
+  padding: 10px !important;
+  padding-bottom: 20px !important;
+  overflow: hidden !important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white;
+}

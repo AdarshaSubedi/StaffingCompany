@@ -1,0 +1,9 @@
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Model.deps.json
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Model.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\bin\Debug\netcoreapp3.1\StaffingCompany.Application.Model.pdb
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Model.csprojAssemblyReference.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Model.AssemblyInfoInputs.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Model.AssemblyInfo.cs
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Model.csproj.CoreCompileInputs.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Model.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.Model\obj\Debug\netcoreapp3.1\StaffingCompany.Application.Model.pdb

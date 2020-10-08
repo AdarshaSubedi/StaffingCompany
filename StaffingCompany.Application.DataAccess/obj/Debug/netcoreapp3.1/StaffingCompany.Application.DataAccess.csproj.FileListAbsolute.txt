@@ -1,0 +1,9 @@
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\bin\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.deps.json
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\bin\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\obj\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.csprojAssemblyReference.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\obj\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.AssemblyInfoInputs.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\obj\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.AssemblyInfo.cs
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\bin\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.pdb
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\obj\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.csproj.CoreCompileInputs.cache
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\obj\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.dll
+F:\AqoreProject\StaffingCompany\StaffingCompany.Solution\StaffingCompany.Application.DataAccess\obj\Debug\netcoreapp3.1\StaffingCompany.Application.DataAccess.pdb

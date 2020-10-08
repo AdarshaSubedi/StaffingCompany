@@ -1,0 +1,34 @@
+<div>
+  <mat-error *ngIf="errorMessage != ''">
+    {{errorMessage}}
+  </mat-error>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="userId">
+      <mat-header-cell *matHeaderCellDef> User Id </mat-header-cell>
+      <mat-cell *matCellDef="let UserDetail"> {{UserDetail.userId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+      <mat-cell *matCellDef="let UserDetail"> {{UserDetail.firstName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+      <mat-cell *matCellDef="let UserDetail"> {{UserDetail.lastName}}  </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let UserDetail"> {{UserDetail.email}}  </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="password">
+      <mat-header-cell *matHeaderCellDef> Password </mat-header-cell>
+      <mat-cell *matCellDef="let UserDetail"> {{UserDetail.password}}  </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
