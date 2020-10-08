@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,16 @@ import { Injectable } from '@angular/core';
 })
 export class UtilityService {
 
-  constructor() { }
+  constructor(private snackbar: MatSnackBar) { }
+
+
+  openSnackBar(message: string, action: string) {
+    this.snackbar.open(message, 'close', {
+      duration: 3000,
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+      panelClass: [action]
+    });
+  }
+
 }

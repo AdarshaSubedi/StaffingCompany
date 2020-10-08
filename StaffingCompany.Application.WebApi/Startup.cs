@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using StaffingCompany.Application.Service.Account;
+using StaffingCompany.Application.Service.Customer;
+using StaffingCompany.Application.Service.Employee;
 
 namespace StaffingCompany.Application.WebApi
 {
@@ -39,6 +41,8 @@ namespace StaffingCompany.Application.WebApi
                   .AllowCredentials());
             });
             services.AddTransient<IAccountService, AccountService>();
+            services.AddTransient<IEmployeeService, EmployeeService>();
+            services.AddTransient<ICustomerService, CustomerService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
