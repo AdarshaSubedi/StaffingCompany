@@ -6,13 +6,15 @@ import { MaterialModule } from '../shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CdkTableModule } from '@angular/cdk/table';
+import { CustomerFormComponent } from './customer-form/customer-form.component';
 
 const routes: Routes = [
   { path: '', component: CustomerComponent}
 ]
 
 @NgModule({
-  declarations: [CustomerComponent],
+  declarations: [CustomerComponent, CustomerFormComponent],
+  entryComponents:[CustomerFormComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

@@ -29,7 +29,7 @@ export class EmployeeComponent implements OnInit {
     this.getAllEmployee();
   }
 
-  getAllEmployee(){
+  getAllEmployee() {
     this.employeeService.getEmployeeDetail().subscribe((response: any) => {
       if (response && response.data) {
         this.dataSource = new MatTableDataSource<MvEmployeeDetail>(response.data);

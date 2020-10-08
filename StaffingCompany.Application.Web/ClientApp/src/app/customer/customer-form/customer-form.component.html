@@ -1,0 +1,44 @@
+<div class="form-container">
+  <mat-toolbar color="primary">{{action}} Customer</mat-toolbar>
+  <form class="customer-form" [formGroup]="customerForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Organization Name</mat-label>
+      <input matInput formControlName="organizationName" [(ngModel)]="selectedCustomer.organizationName" placeholder="Organization Name" required >
+      <mat-error *ngIf="customerForm.controls['organizationName'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Organization Category</mat-label>
+      <input matInput formControlName="organizationCategory" [(ngModel)]="selectedCustomer.organizationCategory" placeholder="What type of Organization" required >
+      <mat-error *ngIf="customerForm.controls['organizationCategory'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Organization Description</mat-label>
+      <textarea matInput formControlName="organizationDescription" [(ngModel)]="selectedCustomer.organizationDescription" placeholder="Organization Description" required >
+        </textarea>
+      <mat-error *ngIf="customerForm.controls['organizationDescription'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Full Addres</mat-label>
+      <input matInput formControlName="fullAddress" [(ngModel)]="selectedCustomer.fullAddress" placeholder="Insert full address" required >
+      <mat-error *ngIf="customerForm.controls['fullAddress'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" [(ngModel)]="selectedCustomer.email" placeholder="Email" required >
+      <mat-error *ngIf="customerForm.controls['email'].errors?.required">Invalid form value</mat-error>
+      <mat-error *ngIf="customerForm.controls['email'].errors?.email">Please enter valid email address</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput formControlName="phone" [(ngModel)]="selectedCustomer.phone" placeholder="contact number" required >
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.required">Invalid form value</mat-error>
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.pattern">Please enter valid data</mat-error>
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.minLength">minimum length should be 8 characters</mat-error>
+      <mat-error *ngIf="customerForm.controls['phone'].errors?.maxLength">maximum 15 characters allowed</mat-error>
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="customerForm.invalid">Save</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Close</button>
+  </div>
+</div>
