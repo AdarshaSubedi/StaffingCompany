@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { UtilityService } from 'src/core/services/utility.service';
 import { LoginService } from './login.service';
 
 @Component({
@@ -18,7 +19,11 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     invalidLogin: 'Invalid Username or Password'
   }
 
-  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router, private snackbar:  MatSnackBar) { }
+  constructor(private fb: FormBuilder,
+    private loginService: LoginService,
+    private router: Router,
+    private snackbar:  MatSnackBar,
+    private utilityService: UtilityService) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -34,7 +39,8 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
       this.loginService.getLogin(loginData).subscribe((response:any) => {
         if (response){
           localStorage.setItem('userId', response.userId);
-          this.openSnackBar('Logged in successfuly', 'X');
+          this.utilityService.openSnackBar('Logged in successfully', 'success');
+          // this.openSnackBar('Logged in successfuly', 'X');
           this.router.navigate(['/user-detail']);
         } else {
           this.errorMessage = this.errorMessageType.invalidForm;
@@ -43,14 +49,14 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  openSnackBar(message, action) {
-    this.snackbar.open(message, action, {
-      duration: 3000,
-      verticalPosition: 'top',
-      horizontalPosition: 'right',
-      panelClass: ['success']
-    });
-  }
+  // openSnackBar(message, action) {
+  //   this.snackbar.open(message, action, {
+  //     duration: 3000,
+  //     verticalPosition: 'top',
+  //     horizontalPosition: 'right',
+  //     panelClass: ['success']
+  //   });
+  // }
 
   ngAfterViewInit(): void {
     this.loginForm.updateValueAndValidity();

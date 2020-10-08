@@ -26,6 +26,18 @@ const appRoutes: Routes = [
   {
     path: 'employee',
     loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
+  },
+  {
+    path: 'job',
+    loadChildren: () => import('./job/job.module').then(m => m.JobModule)
+  },
+  {
+    path: 'assignment',
+    loadChildren: () => import('./assignment/assignment.module').then(m => m.AssignmentModule)
+  },
+  {
+    path: 'transaction',
+    loadChildren: () => import('./transaction/transaction.module').then(m => m.TransactionModule)
   }
 ];
 
