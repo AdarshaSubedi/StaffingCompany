@@ -13,8 +13,6 @@ export class EmployeeFormComponent implements OnInit, AfterViewInit {
 
   employeeForm: FormGroup;
   action: string;
-  // tslint:disable-next-line: radix
-  userId = parseInt(localStorage.getItem('userId'));
   selectedEmployee: MvNewEmployee = <MvNewEmployee>{};
 
   constructor(private fb: FormBuilder,
@@ -35,8 +33,7 @@ export class EmployeeFormComponent implements OnInit, AfterViewInit {
       phone: ['',
        [Validators.required,
         Validators.pattern('[0-9]*'),
-        Validators.minLength(8), Validators.maxLength(15)]],
-      insertPersonId: [ this.userId ]
+        Validators.minLength(8), Validators.maxLength(15)]]
     });
   }
 

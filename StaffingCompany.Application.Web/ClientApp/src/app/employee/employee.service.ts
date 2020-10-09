@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
+  insertPersonId: number = parseInt(localStorage.getItem('userId'));
+
   constructor(private api: WebApiService) { }
 
   getEmployeeDetail(){
@@ -14,9 +16,11 @@ export class EmployeeService {
   }
 
   addEmployee(json): Observable<any> {
+    json.insertPersonId = this.insertPersonId;
     return this.api.post('/employee/addemployee', json);
   }
   updateEmployee(json): Observable<any> {
+    json.insertPersonId = this.insertPersonId;
     return this.api.post('/employee/updateemployee', json);
   }
 }

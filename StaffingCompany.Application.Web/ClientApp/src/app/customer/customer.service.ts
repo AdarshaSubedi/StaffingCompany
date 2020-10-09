@@ -7,6 +7,8 @@ import { WebApiService } from 'src/core/services/web-api.service';
 })
 export class CustomerService {
 
+  insertPersonId: number = parseInt(localStorage.getItem('userId'));
+
   constructor(private api: WebApiService) { }
 
   getCustomerDetail() {
@@ -14,9 +16,11 @@ export class CustomerService {
   }
 
   addCustomer(json): Observable<any> {
+    json.insertPersonId = this.insertPersonId;
     return this.api.post('/customer/addcustomer', json);
   }
   updateCustomer(json): Observable<any> {
+    json.insertPersonId = this.insertPersonId;
     return this.api.post('/customer/updatecustomer', json);
   }
 
