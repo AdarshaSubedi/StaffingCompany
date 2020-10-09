@@ -19,7 +19,7 @@
     </ng-container>
     <ng-container matColumnDef="payPerHour">
       <mat-header-cell *matHeaderCellDef> Pay/hr </mat-header-cell>
-      <mat-cell *matCellDef="let JobDetail"> {{JobDetail.payPerHour}} </mat-cell>
+      <mat-cell *matCellDef="let JobDetail"> ${{JobDetail.payPerHour}} </mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

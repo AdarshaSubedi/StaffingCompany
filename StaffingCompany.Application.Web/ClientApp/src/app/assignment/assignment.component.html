@@ -1,1 +1,41 @@
-<p>assignment works!</p>
+<div class="assignment-table">
+  <button mat-raised-button (click)="onAdd()">Add</button>
+  <button mat-raised-button (click)="onEdit()">Edit</button>
+  <button mat-raised-button (click)="onGenerate()">Completed & Generate Transaction</button>
+  <mat-error *ngIf="errorMessage != ''">
+    {{errorMessage}}
+  </mat-error>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource">
+    <ng-container matColumnDef="assignmentId">
+      <mat-header-cell *matHeaderCellDef> Assignment Id </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.assignmentId}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="employeeName">
+      <mat-header-cell *matHeaderCellDef> Employee </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.employeeName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="organizationName">
+      <mat-header-cell *matHeaderCellDef> Organization </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.organizationName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="jobTitle">
+      <mat-header-cell *matHeaderCellDef> Job </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.jobTitle}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="workHours">
+      <mat-header-cell *matHeaderCellDef> WorkHours </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.workHours}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="activeStatus">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell>
+      <mat-cell *matCellDef="let AssignmentDetail"> {{AssignmentDetail.activeStatus}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selectRow($event, row)"
+      [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}"
+      (mouseover)="row.hovered = true" (mouseout)="row.hovered = false">
+    </mat-row>
+  </mat-table>
+</div>

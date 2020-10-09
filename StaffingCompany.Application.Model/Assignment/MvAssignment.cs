@@ -12,7 +12,7 @@ namespace StaffingCompany.Application.Model.Assignment
         [Required]
         public int jobId { get; set; }
         [Required]
-        public bool status { get; set; }
+        public int workHours { get; set; }
         [Required]
         public int insertPersonId { get; set; }
     }
@@ -26,7 +26,7 @@ namespace StaffingCompany.Application.Model.Assignment
         [Required]
         public int jobId { get; set; }
         [Required]
-        public bool status { get; set; }
+        public int workHours { get; set; }
         [Required]
         public int insertPersonId { get; set; }
     }

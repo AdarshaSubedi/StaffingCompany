@@ -1,1 +1,47 @@
-<p>transaction works!</p>
+<div class="invoice-table">
+  <button mat-raised-button (click)="onGenerate()">Generate Invoice</button>
+  <mat-error *ngIf="errorMessage != ''">
+    {{errorMessage}}
+  </mat-error>
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource">
+    <ng-container matColumnDef="transactionId">
+      <mat-header-cell *matHeaderCellDef> Transaction Id </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> {{TransactionDetail.transactionId}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="employeeName">
+      <mat-header-cell *matHeaderCellDef> Employee </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> {{TransactionDetail.employeeName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="jobTitle">
+      <mat-header-cell *matHeaderCellDef> Job </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> {{TransactionDetail.jobTitle}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="organizationName">
+      <mat-header-cell *matHeaderCellDef> Organization </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> {{TransactionDetail.organizationName}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="payPerHour">
+      <mat-header-cell *matHeaderCellDef> Pay(hr) </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> ${{TransactionDetail.payPerHour}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="workHours">
+      <mat-header-cell *matHeaderCellDef> Worked(hr) </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> {{TransactionDetail.workHours}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef> Amount </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> ${{TransactionDetail.amount}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="insertDate">
+      <mat-header-cell *matHeaderCellDef> Insert Date </mat-header-cell>
+      <mat-cell *matCellDef="let TransactionDetail"> {{TransactionDetail.insertDate}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+      (click)="selectRow($event, row)"
+      [ngClass]="{hovered: row.hovered, highlighted: selection.isSelected(row)}"
+      (mouseover)="row.hovered = true" (mouseout)="row.hovered = false">
+    </mat-row>
+  </mat-table>
+</div>

@@ -1,1 +1,32 @@
-<p>assignment-form works!</p>
+<div class="form-container">
+  <mat-toolbar color="primary">{{action}} Assignment</mat-toolbar>
+  <form class="assignment-form" [formGroup]="assignmentForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Employee</mat-label>
+      <mat-select formControlName="employeeId" [(value)]="selectedAssignment.employeeId">
+        <mat-option *ngFor="let e of employeeList" [value]="e.id">
+          {{e.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Job</mat-label>
+      <mat-select formControlName="jobId" [(value)]="selectedAssignment.jobId">
+        <mat-option *ngFor="let j of jobList" [value]="j.id">
+          {{j.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>WorkHours</mat-label>
+      <input matInput formControlName="workHours" [(ngModel)]="selectedAssignment.workHours" placeholder="quantity" required>
+    </mat-form-field>
+
+  </form>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="assignmentForm.invalid">Save</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Close</button>
+  </div>
+</div>

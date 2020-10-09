@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TransactionFormComponent } from './transaction-form/transaction-form.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TransactionComponent } from './transaction.component';
 import { MaterialModule } from '../shared/material.module';
@@ -14,10 +13,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    TransactionComponent,
-    TransactionFormComponent
+    TransactionComponent
   ],
-  entryComponents: [TransactionFormComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
