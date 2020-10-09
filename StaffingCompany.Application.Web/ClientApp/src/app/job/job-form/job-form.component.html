@@ -1,1 +1,28 @@
-<p>job-form works!</p>
+<div class="form-container">
+  <mat-toolbar color="primary">{{action}} Job</mat-toolbar>
+  <form class="job-form" [formGroup]="jobForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Job Title</mat-label>
+      <input matInput formControlName="jobTitle" [(ngModel)]="selectedJob.jobTitle" placeholder="Job Title" required >
+      <mat-error *ngIf="jobForm.controls['jobTitle'].errors?.required">Invalid form value</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Pay(per hr)</mat-label>
+      <input matInput formControlName="payPerHour" [(ngModel)]="selectedJob.payPerHour" placeholder="hourly payment" required >
+      <mat-error *ngIf="jobForm.controls['payPerHour'].errors?.required">Invalid form value</mat-error>
+      <mat-error *ngIf="jobForm.controls['payPerHour'].errors?.pattern">Please enter valid data</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Customer</mat-label>
+      <mat-select formControlName="customerId" [(value)]="selectedJob.customerId">
+        <mat-option *ngFor="let c of customerList" [value]="c.id">
+          {{c.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="jobForm.invalid">Save</button>
+    <button mat-raised-button color="warn" (click)="onClose()">Close</button>
+  </div>
+</div>
