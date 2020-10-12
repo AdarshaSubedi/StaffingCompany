@@ -39,7 +39,7 @@ export class TransactionComponent implements OnInit {
   }
 
   onGenerate(){
-
+    console.log(this.selection.selected);
   }
 
   selectRow(e: any, row: MvTransactionDetail) {

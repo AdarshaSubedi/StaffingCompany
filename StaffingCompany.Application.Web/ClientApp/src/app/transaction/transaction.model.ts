@@ -8,6 +8,9 @@ export interface MvTransactionDetail {
   payPerHour: number;
   amount: number;
   insertDate: Date;
+  employeeId: number;
+  customerId: number;
+  jobId: number;
 }
 export interface MvNewTransaction{
   assignmentId: number;
